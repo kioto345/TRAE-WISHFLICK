@@ -47,6 +47,11 @@ export const getWishlist = id => async dispatch => {
   }
 };
 
+// Получение вишлиста по ID (алиас для getWishlist)
+export const getWishlistById = (id) => async dispatch => {
+  return dispatch(getWishlist(id));
+};
+
 // Создание вишлиста
 export const createWishlist = (formData, navigate) => async dispatch => {
   try {
